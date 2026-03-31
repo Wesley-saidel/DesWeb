@@ -2,8 +2,8 @@ header{
     display: flex;
     justify-content:space-between;
     background-color: white;
-    padding: 2vw 5vw;
-    font-size: 1rem
+    padding: 3vw 6vw;
+    font-size: 1.2rem
 }
 header ul {
     display: flex;
@@ -18,12 +18,52 @@ header li:last-child a {
     padding: 1vw 2vw;
 
 }
-
+header li:last-child a:hover {
+    background:  #4f7bff
+}
+/*section*/
 section.banner{
     display: flex;
     justify-content: space-between;
     background: #F7F5FD;
+    padding: 6vw;
 
 
 }
+
+
+section.banner h1 {
+    padding: 0vw;
+    font-size: 7vw;
+}
+
+section.banner p{
+    padding: 3vw 0vw;
+    font-size: 2.3vw;
+    color: #2D2D2D;
+    opacity: 50%;
+}
+
+section.banner button{
+    padding: 2vw 4vw;
+    background: #F8D57E;
+    border-radius: 1vw;
+    font-size: 1.8vw;
+}
+section.banner button:hover{
+    background: #fade98;
+}
+
+
+section.banner button:active {
+  transform: scale(1.1); 
+}
+/*section video*/
+section.video{
+    display: flex;
+    justify-content: center;
+    padding: 7vw;
+    background: #F2FAF8;
+}
+
 
