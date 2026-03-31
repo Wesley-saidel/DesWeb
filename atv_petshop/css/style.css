@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    justify-content:space-between;
+    background-color: white;
+    padding: 2vw 5vw;
+    font-size: 1rem
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw
+    
+    
+}
+header li:last-child a {
+    background:  #3366FF;
+    border-radius: 1vw;
+    padding: 1vw 2vw;
+
+}
+
+section.banner{
+    display: flex;
+    justify-content: space-between;
+    background: #F7F5FD;
+
+
+}
+
