@@ -120,3 +120,53 @@ section.dylan img {
     padding: 0vw 3vw;
     
 }
+/*faq*/
+section.faq  {
+    display: flex;
+    justify-content: space-between;
+}
+section.faq div{
+    padding:5vw 6vw;
+}
+
+section.faq div:first-child p {
+    padding: 3vw 0vw ;
+}
+section.faq div form input{
+    
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    border: solid 1px;
+    border-color: #D0D0D0;
+
+}
+section.faq div button{
+    background: #3366FF;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    color: #fdfdfd;
+}
+
+section.faq div ul {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    
+}
+section.faq div ul li {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    padding: 0vw 1vw;
+    gap: 1vw;
+}
+/*rodape*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 6vw ;
+}
+footer div {
+    display: flex;  
+}
