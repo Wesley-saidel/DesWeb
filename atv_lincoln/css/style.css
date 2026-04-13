@@ -1,0 +1,22 @@
+header ul{
+    display: flex;
+    gap: 7vw;
+    margin-top: 6vw;
+    padding: 7vw 6vw;
+    font-size: 6vw;
+    border-bottom: solid 2px rgb(209, 207, 207);
+    
+    
+}
+/*banner*/
+
+section.banner div{
+    margin-left: 7vw;
+    margin-right: 7vw;
+    padding: 3vw;
+    text-align: center;
+    background: #F6F0E4;
+    border:solid #F6F0E4;
+    border-radius: 0.7rem;
+    
+}
