@@ -1,0 +1,162 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 3vw;
+    align-items: center;
+}
+
+
+
+header ul{
+    display: flex;
+    gap: 2.5vw;
+    font-size: 2dvh;
+}
+
+/*banner*/
+div.quadrado p{
+    padding: 2vw 0vw;
+    font-size: 1.8vw;
+}
+
+div.quadrado h1 {
+    font-size: 3vw;
+    color: #B88E2F;
+}
+div.quadrado button{
+    background: #B88E2F;
+    padding: 1vw 3vw;
+    color: white;
+}
+
+div.quadrado button:hover{
+    background: #af841e;
+    transform: scale(1.1);
+}
+section.banner{
+    display: flex;
+    justify-content: right; 
+    background:url(../images/imagem-banner.png) no-repeat;
+    padding: 0vw 3vw;
+    background-size:cover;
+}
+
+section.banner div:last-child{
+    
+    display:block;
+    margin-right: 3vw;
+    margin-top: 4vw;
+    margin: 4vw 4vw;
+    padding: 3vw 3vw ;
+    background: #FFF3E3;
+    border: solid 1px #FFF3E3;
+    border-radius: 0.2rem;
+    
+}
+section.banner div:first-child p{
+    padding: 23vw;
+}
+
+/*our products*/
+
+section.ourproducts div:first-child{
+    
+    text-align: center;
+    margin: 4vw;
+}
+
+section.ourproducts div:first-child h2 {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+div.products ul{
+    display: flex;
+    justify-content: center;
+    margin: 3vw;
+    gap: 5.5vw;
+} 
+
+div.products ul li {
+    background: rgb(245, 245, 243);
+    border: solid 1px rgb(245, 245, 243);
+    border-radius: 0.1rem;
+    
+}
+
+div.products ul li:hover{
+    transform: scale(1.14);
+}
+
+div.products ul li h2{
+    font-size: 2.2vw;
+    padding: 1vw 1vw;
+    
+}
+
+div.products ul li p{
+    padding: 1vw 1vw;
+}
+
+div.show {
+    text-align: center;
+    color: #B88E2F;
+    border: solid 1px;
+    margin-left: 40vw;
+    margin-right: 40vw ;
+    padding: 1vw 0vw;
+    margin-bottom: 9vw;
+
+}
+
+div.show:hover {
+    background: whitesmoke;
+    transform: scale(1.1);
+}
+/*inspiration*/
+
+section.inspiration {
+    display: flex;
+    justify-content: space-between;
+    background: #FFF3E3;
+    gap: 2vw;
+    padding: 3vw 3vw;
+}
+
+section.inspiration div:first-child{
+
+    padding: 5vw 0vw;
+    
+}
+
+section.inspiration h2{
+    display: grid;
+    align-items: center;
+    
+    font-size: 3.5vw;
+
+    padding: 1vw 0vw;
+}
+
+section.inspiration p{
+    display: grid;
+    align-items: center;
+    padding: 1.5vw 0vw;
+    font-size: 1.5vw;
+}
+section.inspiration button{
+    display: flex;
+    justify-content: right;
+    border: solid 1px #B88E2F;
+    background: #B88E2F;
+    color: white;
+    padding: 1vw 3vw;
+    font-size: 1.5vw;
+    
+    
+}
+
+section.inspiration button:hover{
+    background: #e3b955;
+    transform: scale(1.1);
+}
