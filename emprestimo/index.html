@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>simulador de emprestimo</title>
+</head>
+
+<body>
+
+
+
+    <main>
+        <h1>
+            simulador de emprestimo
+        </h1>
+        <section class="inputs">
+            <form action="#">
+                <p>
+                    <label for="rendabruta">Renda Mensal Bruta(R$):</label>
+                    <input type="text" id="rendabruta" placeholder="Digite sua renda bruta mensal">
+
+                </p>
+
+                <p>
+                    <label for="tempo">Prazo emprestimo(meses):</label>
+                    <input type="text" id="tempo" placeholder="Digite o Prazo em meses">
+                </p>
+
+                <p>
+
+                    <label for="valor">Valor do emprestimo(R$):</label>
+                    <input type="text" id="valor" placeholder="Digite o valor do emprestimo">
+                </p>
+
+                <button type="button" onclick="calcular()"> calcular parcelas </button>
+
+                <h2></h2>
+            </form>
+        </section>
+    </main>
+    <script>
+        function calcular() {
+            let renda_bruta = parseFloat(document.getElementById("rendabruta").value);
+            let valor = parseFloat(document.getElementById("valor").value);
+            let tempo = parseFloat(document.getElementById("tempo").value);
+            let juros = 0;
+            let ano = Math.trunc(tempo / 12);
+
+            if (ano >= 1) {
+                juros = valor += valor * (ano * 0.02);
+            }
+
+            let resultado = document.querySelector("h2");
+
+            let parcela = valor / tempo;
+
+            if (parcela > (renda_bruta * 0.3)) {
+                resultado.innerHTML = "há risco em fazer este empréstimo "
+            }
+
+            else {
+                resultado.innerHTML = "não a riscos em fazer este empréstimo, fica em parcelas de (R$)" + parcela.toFixed(0);
+            }
+
+
+
+
+
+
+
+
+        }
+    </script>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

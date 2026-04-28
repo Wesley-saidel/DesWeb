@@ -1,0 +1,48 @@
+
+
+main {
+    
+    border: solid 0.3vw rgb(77, 77, 255);
+    margin: 10vw;
+    border-radius: 0.5rem;
+
+}
+main h1{
+    font-size: 6vw;
+    margin: 4vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+main form{
+    display: grid;
+    gap: 3vw;
+    font-size: 2.5vw;
+    margin: 6vw;
+}
+
+main label{
+    display: flex;
+    padding: 1vw 0vw;
+}
+
+main input {
+    border: solid 2px rgb(190, 185, 185);
+    border-radius: 0.3rem ;
+    width: 100%;
+    padding: 1.2vw 2vw;
+}
+
+main button{
+    background: rgb(77, 77, 255);
+    color:white;
+    padding: 2vw 0vw;
+    border-radius: 0.3rem;
+}
+
+main button:hover{
+    background: rgb(99, 99, 253);
+}
+main button:active{
+    transform: scale(1.1);
+}
