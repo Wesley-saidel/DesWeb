@@ -46,3 +46,21 @@ main button:hover{
 main button:active{
     transform: scale(1.1);
 }
+
+main h2 {
+    text-align: center;
+    font-weight: 300;
+    border-radius: 0.4rem;
+    background: rgb(64, 252, 73);
+    
+    margin-top: 2vw;
+    
+}
+
+main h3 {
+    text-align: center;
+    background: rgb(252, 64, 89);
+    font-weight: 300;
+    border-radius: 0.4rem;
+    color: aliceblue;
+}

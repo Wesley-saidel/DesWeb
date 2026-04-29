@@ -39,41 +39,42 @@
                 <button type="button" onclick="calcular()"> calcular parcelas </button>
 
                 <h2></h2>
+
+                <h3></h3>
             </form>
         </section>
     </main>
     <script>
-        function calcular() {
-            let renda_bruta = parseFloat(document.getElementById("rendabruta").value);
-            let valor = parseFloat(document.getElementById("valor").value);
-            let tempo = parseFloat(document.getElementById("tempo").value);
-            let juros = 0;
-            let ano = Math.trunc(tempo / 12);
+    function calcular() {
+        let renda_bruta = parseFloat(document.getElementById("rendabruta").value);
+        let valor = parseFloat(document.getElementById("valor").value);
+        let tempo = parseFloat(document.getElementById("tempo").value);
+        let resultado = document.querySelector("h2");
+         let preencha = document.querySelector("h3");
 
-            if (ano >= 1) {
-                juros = valor += valor * (ano * 0.02);
-            }
-
-            let resultado = document.querySelector("h2");
-
-            let parcela = valor / tempo;
-
-            if (parcela > (renda_bruta * 0.3)) {
-                resultado.innerHTML = "há risco em fazer este empréstimo "
-            }
-
-            else {
-                resultado.innerHTML = "não a riscos em fazer este empréstimo, fica em parcelas de (R$)" + parcela.toFixed(0);
-            }
-
-
-
-
-
-
-
-
+        
+        if (isNaN(renda_bruta) || isNaN(valor) || isNaN(tempo) || tempo === 0) {
+            preencha.innerHTML = "Preencha todos os campos corretamente.";
+            return;
         }
+
+        let ano = Math.trunc(tempo / 12);
+
+       
+
+        if (ano >= 1) {
+            let juros = valor * (ano * 0.02);
+            valor = valor + juros;
+        }
+
+        let parcela = valor / tempo;
+
+        if (parcela > (renda_bruta * 0.3)) {
+            resultado.innerHTML = "Há risco em fazer este empréstimo.";
+        } else {
+            resultado.innerHTML = "Não há riscos. Parcelas de R$ " + parcela.toFixed(2);
+        }
+    }
     </script>
     <footer>
 
