@@ -1,0 +1,146 @@
+* {
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+main {
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+    width: 380px;
+}
+
+
+h1 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1.2rem;
+}
+
+h1 strong {
+    font-weight: bold;
+}
+
+.escolha {
+    border: solid 0.1rem rgb(180, 178, 178);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.data {
+    display: flex;
+    font-size: 12px;
+    text-align: left;
+}
+
+.data p {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.data p label {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.data p input {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.checkinData {
+    border-right: solid 0.1rem rgb(180, 178, 178);
+}
+
+.hospedes {
+    border-top: solid 0.1rem rgb(180, 178, 178);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.hospedes label {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.hospedes select {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    cursor: pointer;
+    background: transparent;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(to right, #e61e4d, #d70466);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+}
+
+button:hover {
+    background: linear-gradient(to right, #d70466, #e61e4d);
+}
+
+
+main > p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+
+.valores {
+    border-top: solid 0.1rem rgb(220, 220, 220);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.valores > p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.valores h2 {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.valores p:last-child h2 strong {
+    font-size: 15px;
+}

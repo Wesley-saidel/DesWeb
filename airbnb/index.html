@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airbnb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <main>
+        <h1><strong>R$</strong><span id="precoNoite">620</span> noite</h1>
+
+        <section class="escolha">
+            <div class="data">
+                <p class="checkinData">
+                    <label for="check-in"><strong>check-in</strong></label>
+                    <input type="date" id="check-in" onchange="reserva()" />
+                </p>
+                <p>
+                    <label for="check-out"><strong>check-out</strong></label>
+                    <input type="date" id="check-out" onchange="reserva()"/>
+                </p>
+            </div>
+            <div class="hospedes">
+                <label for="hospedes"><strong>hóspedes</strong></label>
+                <select name="hospedes" id="hospedes" onchange="reserva()">
+                <option value="1">1 hóspede</option>
+                <option value="2">2 hóspedes</option>
+                <option value="3">3 hóspedes</option>
+                <option value="4">4 hóspedes</option>
+                </select>
+            </div>
+        </section>
+
+        <button onclick="reserva()">reservar</button>
+
+        <p>você ainda não será cobrado</p>
+
+        <section class="valores">
+            <p>
+                <h2>R$ <span id="precoNoiteResumo">620</span> x <span id="noiteSpan">1</span> noites</h2>
+                <p>R$<span id="valnoitexdia">620</span></p>
+            </p>
+            <p>
+                <h2>taxa de limpeza</h2>
+                <p>R$<span>120</span></p>
+            </p>
+            <p>
+                <h2>taxa de serviço do airbnb</h2>
+                <p>R$<span id="taxaAirbnb">93</span></p>
+            </p>
+            <p>
+                <h2><strong>Total sem impostos</strong></h2>
+                <p>R$ <span id="total">833</span></p>
+            </p>
+        </section>
+
+        <script>
+            function reserva() {
+                let checkin = new Date(document.getElementById("check-in").value);
+                let checkout = new Date(document.getElementById("check-out").value);
+                let hospedes = Number(document.getElementById("hospedes").value);
+
+                
+                let valNoite = 620;
+                if (hospedes > 1) {
+                    valNoite = 620 + (620 * (hospedes * 0.20));
+                }
+
+                
+                if (!document.getElementById("check-in").value || !document.getElementById("check-out").value) {
+                    document.querySelector("h1 span").textContent = valNoite;
+                    return;
+                }
+
+                let noitesReservadas = (checkout - checkin) / (24 * 60 * 60 * 1000);
+
+                
+                if (noitesReservadas < 1) {
+                    alert("Data de check-out deve ser depois do check-in!");
+                    return;
+                }
+
+                let valorXnoites = valNoite * noitesReservadas;
+                let taxaLimpeza = 120;
+                let taxaAirbnb = valNoite * 0.15;
+                let total = valorXnoites + taxaLimpeza + taxaAirbnb;
+
+                
+                document.getElementById("precoNoite").textContent = valNoite;
+                document.getElementById("precoNoiteResumo").textContent = valNoite;
+                document.getElementById("noiteSpan").textContent = noitesReservadas;
+                document.getElementById("valnoitexdia").textContent = valorXnoites;
+                document.getElementById("taxaAirbnb").textContent = taxaAirbnb.toFixed(2);
+                document.getElementById("total").textContent = total.toFixed(2);
+            }
+        </script>
+
+    </main>
+</body>
+</html>
