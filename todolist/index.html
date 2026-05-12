@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>To do list</title>
+</head>
+<header>
+    <h1>to do list</h1>
+</header>
+<body>
+    <section >
+        <div>
+            <form action="#">
+                <input type="text" placeholder="Add new task" class="addtask"><button type="button" class="add">Add</button>
+            </form>
+            <ul></ul>
+
+        </div>
+    </section>
+    <script>
+        let button = document.querySelector("button");
+    button.addEventListener("click", function() {
+        let input = document.querySelector("input[type='text']")
+        let tarefa = document.createElement("li")
+        let checkbox = document.createElement("input")
+        checkbox.type = 'checkbox';
+        tarefa.innerHTML = `<input type="checkbox"> <span>${input.value}</span> <span onClick='remover(this)'>delete</span>`;
+        tarefa.innerHTML = `<input type="checkbox"> <span>${input.value}</span> <span class="delete" onClick='remover(this)'>delete</span>`;
+        tarefa.innerHTML = `<div><input type="checkbox"> <span>${input.value}</span></div> <span class="delete" onClick='remover(this)'>delete</span>`;
+
+        let ul = document.querySelector("ul")
+        ul.appendChild(tarefa)
+        input.value = ""
+        input.focus()
+
+        })
+        function remover(elemento) {
+            elemento.parentElement.remove()
+            
+        }
+    </script>
+</body>
+</html>
