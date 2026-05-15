@@ -1,0 +1,41 @@
+         *{
+            list-style: none;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section {
+            width: 60%;
+            margin: 10vh auto;
+            font-size: 2dvh;
+            
+        }
+        ul{
+            padding: 1dvh;
+            background: rgb(173, 173, 173);
+        }
+        ul li {
+            
+            padding: 4px;
+        }
+        ul li h3 {
+            background: rgb(0, 0, 0);
+            color: white;
+            height: 6dvh;
+            display: flex;
+            justify-content: space-between;
+            
+            font-size: 3vw;
+
+        }
+          ul li{
+            height: 5vw;
+            overflow: hidden;
+            transition: height 1s;
+            
+          }
+
+          ul li p{
+            height: 25dvh;
+          }

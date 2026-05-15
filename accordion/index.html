@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <h2>FAQ</h2>
+        <ul>
+            <li>
+                <h3>Como fazer matricula <span>+</span></h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus beatae ea eos necessitatibus laudantium similique assumenda, vitae sapiente, quasi odit eius voluptatibus tempora praesentium ipsum culpa facere? Cupiditate, eaque aperiam!
+                </p>
+            </li>
+             <li>
+                <h3>Como solicitar segunda chamada <span>+</span></h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus beatae ea eos necessitatibus laudantium similique assumenda, vitae sapiente, quasi odit eius voluptatibus tempora praesentium ipsum culpa facere? Cupiditate, eaque aperiam!
+                </p>
+            </li>
+             <li>
+                <h3>Como pedir aproveitamento de disciplina <span>+</span></h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus beatae ea eos necessitatibus laudantium similique assumenda, vitae sapiente, quasi odit eius voluptatibus tempora praesentium ipsum culpa facere? Cupiditate, eaque aperiam!
+                </p>
+            </li>
+        </ul>
+    </section>
+    <script>
+        let titulos = document.querySelectorAll("h3")
+        titulos.forEach(function(titulo){
+            titulo.addEventListener("click", function(){
+                let texto = titulo.nextElementSibling
+                /*if (texto.style.display == "none") {
+                    texto.style.display = "block"
+                    titulo.querySelector("span").innerHTML = "-"
+                } else {
+                    texto.style.display = "none"
+                    titulo.querySelector("span").innerHTML = "+"
+                }*/
+
+               console.log(titulo.nextSibling.nextSibling.clientHeight)
+               let altura = titulo.nextSibling.nextSibling.clientHeight+0;
+               console.log(altura);
+               let li = titulo.parentElement;
+                if (li.style.height == altura+"px") {
+                    li.style.height = "30px"
+                } else {
+                    li.style.height =altura+"px"
+                }
+                
+            })
+        })
+
+    </script>
+</body>
+</html>
